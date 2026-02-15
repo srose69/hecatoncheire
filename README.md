@@ -2,6 +2,10 @@
 
 Multi-agent continuous development system with local LLM orchestration.
 
+> **⚠️ Work in Progress** — This project is under active development. Some features may not work or may behave unexpectedly. Testing and verification are required before any production use. If you find this useful and want to improve it — **contributions are very welcome!**
+
+> **⚠️ В разработке** — Проект находится в стадии активной разработки. Что-то может не работать или работать не так, как ожидается. Перед использованием необходимо тестировать и проверять. Если решите допилить и использовать — **пожалуйста, контрибьютьте!**
+
 **[English](#english)** | **[Русский](#русский)**
 
 ---
