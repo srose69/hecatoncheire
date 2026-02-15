@@ -1,0 +1,39 @@
+role: user
+content: |
+  Break down this request into clear acceptance criteria.
+  
+  REQUEST: {user_prompt}
+  
+  Provide your analysis in this exact format:
+  
+  REQUIREMENTS:
+  - Requirement 1
+  - Requirement 2
+  
+  FORBIDDEN:
+  - Don't do X
+  - Don't do Y
+  
+  MINIMUM_VIABLE:
+  Brief description of simplest working version.
+  
+  SUCCESS_CRITERIA:
+  How to verify it works correctly.
+  
+  Example for "Create login form":
+  REQUIREMENTS:
+  - Username and password input fields
+  - Submit button
+  - Form validation
+  
+  FORBIDDEN:
+  - No hardcoded credentials
+  - No plain text password storage
+  
+  MINIMUM_VIABLE:
+  Basic HTML form with two inputs and submit button.
+  
+  SUCCESS_CRITERIA:
+  Form accepts input and triggers validation on submit.
+  
+  Now analyze the request above.

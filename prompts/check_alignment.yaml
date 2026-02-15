@@ -1,0 +1,19 @@
+role: user
+content: |
+  Check if this code aligns with the original user request.
+  
+  ORIGINAL REQUEST: {original_request}
+  
+  IMPLEMENTED CODE:
+  ```
+  {code}
+  ```
+  
+  Answer these questions:
+  1. Does the code solve the original request? (YES/NO)
+  2. Are there unnecessary additions not requested? (YES/NO)
+  3. Brief reason (1 sentence)
+  
+  Format:
+  ALIGNED: YES/NO
+  REASON: [your reason]

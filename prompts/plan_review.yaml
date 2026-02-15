@@ -1,0 +1,18 @@
+content: |
+  Review the following implementation plan against acceptance criteria.
+  
+  ACCEPTANCE CRITERIA:
+  {criteria}
+  
+  IMPLEMENTATION PLAN:
+  {plan}
+  
+  Analyze the plan for:
+  1. Does it cover all requirements?
+  2. Are forbidden approaches avoided?
+  3. Is the plan realistic and complete?
+  4. Are there any missing components?
+  
+  Respond with:
+  APPROVED: yes/no
+  FEEDBACK: [specific issues or approval message]

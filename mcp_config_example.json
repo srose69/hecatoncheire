@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "hecatoncheire": {
+      "command": "docker",
+      "args": [
+        "exec",
+        "-i",
+        "hecatoncheire",
+        "python",
+        "src/hecatoncheire.py"
+      ],
+      "disabled": false,
+      "timeout": 300000
+    }
+  }
+}

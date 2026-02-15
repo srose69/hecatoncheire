@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # Hecatoncheire - unified container with Observer model server + MCP server
+  hecatoncheire:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      cache_from:
+        - hecatoncheire:latest
+      # BuildKit inline cache for faster rebuilds
+      args:
+        BUILDKIT_INLINE_CACHE: "1"
+    image: hecatoncheire:latest
+    container_name: hecatoncheire
+    command: ["/app/entrypoint.sh"]
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: false
+    volumes:
+      # Mount local GGUF models (read-only)
+      - /path/to/your/model.gguf:/models/model.gguf:ro
+      # Mount config (read-only)
+      - ./config.yaml:/app/config.yaml:ro
+      # Persistent worklog directory (read-write)
+      - hecatoncheire_worklog:/app/.worklog
+      # Mount workspace for code access (read-write)
+      - /path/to/your/workspace:/workspace:rw
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 12G
+        reservations:
+          memory: 8G
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  hecatoncheire_worklog:
+    driver: local
